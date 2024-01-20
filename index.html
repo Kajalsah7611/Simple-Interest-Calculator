@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interest Calculator</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+
+<body>
+    <div class="calculator-container">
+        <h2 class="text-center">Interest Calculator</h2>
+        <form id="interestForm">
+            <div class="form-group">
+                <label for="principal">Principal Amount:</label>
+                <input type="number" class="form-control" id="principal" required>
+            </div>
+            <div class="form-group">
+                <label for="rate">Interest Rate (Monthly):</label>
+                <input type="number" class="form-control" id="rate" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="startDate">Start Date:</label>
+                <input type="date" class="form-control" id="startDate" required>
+            </div>
+            <div class="form-group">
+                <label for="endDate">End Date:</label>
+                <input type="date" class="form-control" id="endDate" required>
+            </div>
+            <button type="button" class="btn btn-primary btn-block" onclick="calculateInterest()">Calculate
+                Interest</button>
+        </form>
+        <div id="result" class="text-center"></div>
+    </div>
+
+   <script src="app.js"></script>
+    
+</body>
+
+</html>
