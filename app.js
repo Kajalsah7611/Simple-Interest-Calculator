@@ -6,6 +6,13 @@
 
             const endDate = document.getElementById("endDate").value;
 
+
+            if (isNaN(principal) || isNaN(rate) || startDate === "" || endDate === "") {
+                const resultElement = document.getElementById("result");
+                resultElement.innerHTML = "Please enter valid values for all fields.";
+                return false;  // Return early if validation fails
+            }
+
             // Assuming a simple interest calculation for demonstration purposes
 
             const timeDiff = new Date(endDate) - new Date(startDate);  // new Date(endDate) - new Date(startDate) creates Date objects for the start and end dates, and the difference between them is calculated in milliseconds.
@@ -19,6 +26,6 @@
             // Display the result in the #result div
             const resultElement = document.getElementById("result");
             resultElement.innerHTML = `The interest between ${startDate} and ${endDate} is: <h3>${interest.toFixed(2)}</h3> <br> Total Amount (including interest) is:<h3>${totalAmount.toFixed(2)} </h3>`;
-
+return false
         }
    
