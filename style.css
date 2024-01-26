@@ -44,6 +44,6 @@ body {
 }
 
 #result:hover {
-    background-color: #e0f0ff;
+    background-color: #b9bbbd;
     transition: background-color 0.3s ease-in-out;
 }
